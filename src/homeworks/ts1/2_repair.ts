@@ -27,12 +27,19 @@ export type Percent = {
   percent: number;
 };
 
+function exhaustiveGuard(_type: never): never {
+  throw new Error(`ERROR! Reached forbidden guard function with unexpected value: ${JSON.stringify(_type)}`);
+}
+
 export const getDataAmount = (data: Data): number => {
   switch (data.type) {
     case 'Money':
       return (data.value as Money).amount;
 
+    case 'Percent':
+      return (data.value as Percent).percent;
+
     default:
-      throw new Error(`unknown type: ${data.type}`);
+      return exhaustiveGuard(data.type);
   }
 };
