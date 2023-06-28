@@ -42,6 +42,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.6.12",
     "fork-ts-checker-webpack-plugin": "^8.0.0",
     "html-webpack-plugin": "^5.5.1",
     "husky": "^8.0.0",
@@ -52,6 +53,7 @@
     "prettier": "2.8.8",
     "sass-loader": "^13.3.1",
     "storybook": "^7.0.18",
+    "storybook-addon-designs": "^6.3.1",
     "style-loader": "^3.3.3",
     "ts-jest": "^29.1.0",
     "ts-loader": "^9.4.3",
@@ -63,6 +65,8 @@
   "dependencies": {
     "clsx": "^1.2.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-polymorphic-types": "^2.0.0",
+    "styled-components": "^6.0.0-rc.5"
   }
 }
