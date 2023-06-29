@@ -25,4 +25,10 @@ export const Big: Story = {
   },
 };
 
+export const Mobile: Story = {
+  args: {
+    viewType: 'mobile',
+  },
+};
+
 export default meta;

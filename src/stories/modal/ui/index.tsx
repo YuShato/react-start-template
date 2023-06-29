@@ -62,10 +62,11 @@ const CloseButton = styled.button`
   svg path {
     transition: fill 0.3s ease;
   }
-
-  &:hover {
-    svg path {
-      fill: #a3464e;
+  @media (hover: hover) {
+    &:hover {
+      svg path {
+        fill: #a3464e;
+      }
     }
   }
 `;

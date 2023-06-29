@@ -42,7 +42,7 @@ export const Button = ({
     >
       {Icon && <Icon />}
 
-      {label}
+      <span>{label}</span>
     </UiButton>
   );
 };

@@ -3,6 +3,7 @@ import React from 'react';
 /* LOGO */
 import LogoSvg from './assets/logo';
 import BigLogoSvg from './assets/big-logo';
+import LogoMobile from './assets/mobile';
 
 /* UI */
 import { css, styled } from 'styled-components';
@@ -14,8 +15,6 @@ const UiLogoWrapper = styled.div<{ viewType: LogoType }>`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 150px;
-  height: 34px;
 
   svg {
     width: 100%;
@@ -25,17 +24,46 @@ const UiLogoWrapper = styled.div<{ viewType: LogoType }>`
   }
 
   ${({ viewType }) =>
+    viewType === 'default' &&
+    css`
+      width: 150px;
+      height: 34px;
+    `}
+
+  ${({ viewType }) =>
     viewType === 'big' &&
     css`
       width: 215px;
       height: 135px;
     `}
+
+  ${({ viewType }) =>
+    viewType === 'mobile' &&
+    css`
+      width: 35px;
+      height: 35px;
+
+      svg {
+        width: 35px;
+        height: 35px;
+      }
+    `}
 `;
 
+const LogoByType = {
+  default: LogoSvg,
+  big: BigLogoSvg,
+  mobile: LogoMobile,
+};
+
 const Logo = ({ viewType = 'default' }: LogoProps) => {
+  const LogoSvg = LogoByType[viewType];
+
   return (
     <div>
-      <UiLogoWrapper viewType={viewType}>{viewType === 'big' ? <BigLogoSvg /> : <LogoSvg />}</UiLogoWrapper>
+      <UiLogoWrapper viewType={viewType}>
+        <LogoSvg />
+      </UiLogoWrapper>
     </div>
   );
 };

@@ -7,16 +7,19 @@ interface NavLinkItemProps extends UiNavListLinkProps {
     id: number;
     name: string;
     pathLink: string;
+    icon?: () => React.JSX.Element;
   };
   isActive?: boolean;
 }
 
 const NavLinkItem = ({ path, isActive = false }: NavLinkItemProps) => {
-  const { name, pathLink } = path;
+  const { name, pathLink, icon: Icon } = path;
 
   return (
     <UiHeader.NavItem href={pathLink} isActive={isActive}>
-      {name}
+      <Icon />
+
+      <span>{name}</span>
     </UiHeader.NavItem>
   );
 };

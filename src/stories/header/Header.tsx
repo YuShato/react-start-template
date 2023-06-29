@@ -20,17 +20,23 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps
   return (
     <UiHeader>
       <UiHeader.Logo href="/">
-        <Logo viewType="default" />
+        <UiHeader.DesktopLogo>
+          <Logo viewType="default" />
+        </UiHeader.DesktopLogo>
+
+        <UiHeader.MobileLogo>
+          <Logo viewType="mobile" />
+        </UiHeader.MobileLogo>
       </UiHeader.Logo>
 
       <NavList />
 
       {user ? (
         <>
-          <Button label="Logout" viewType="logout" onClick={onLogout} />
+          <Button label="Logout" viewType="logout" size="small" onClick={onLogout} />
         </>
       ) : (
-        <Button label="Login" viewType="login" onClick={onLogin} />
+        <Button label="Login" viewType="login" size="small" onClick={onLogin} />
       )}
     </UiHeader>
   );

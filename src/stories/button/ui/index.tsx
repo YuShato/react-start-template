@@ -31,8 +31,10 @@ const UiButton = styled.button<UiButtonProps>`
   border: 1px solid transparent;
   transition: all 0.3s;
 
-  &:hover {
-    opacity: 0.6;
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.6;
+    }
   }
 
   ${({ primary }) =>
@@ -165,9 +167,43 @@ const UiButton = styled.button<UiButtonProps>`
       line-height: 15px;
       border: 1px solid transparent;
 
-      &:hover {
-        opacity: 0.8;
-        border: 1px solid #46a358;
+      @media (hover: hover) {
+        &:hover {
+          opacity: 0.8;
+          border: 1px solid #46a358;
+        }
+      }
+
+      @media ${MOBILE_MAX} {
+        width: 40px;
+        height: 40px;
+
+        span {
+          display: none;
+        }
+
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    `}
+
+  ${({ viewType }) =>
+    viewType === 'login' &&
+    css`
+      @media ${MOBILE_MAX} {
+        width: 40px;
+        height: 40px;
+
+        span {
+          display: none;
+        }
+
+        svg {
+          width: 30px;
+          height: 30px;
+        }
       }
     `}
 `;
