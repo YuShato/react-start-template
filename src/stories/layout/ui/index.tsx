@@ -2,16 +2,12 @@ import { MOBILE_MAX, TABLET_MAX } from '../../../constants/media-query';
 import { styled } from 'styled-components';
 
 const LayoutWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
   width: 100%;
   height: 100%;
   min-height: 100vh;
   padding-inline: 40px;
   box-sizing: border-box;
   min-width: 100%;
-  position: relative;
 
   @media ${TABLET_MAX} {
     padding-inline: 20px;
@@ -22,6 +18,18 @@ const LayoutWrapper = styled.div`
   }
 `;
 
-const UiLayout = Object.assign(LayoutWrapper, {});
+const LayoutContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+`;
+
+const UiLayout = Object.assign(LayoutWrapper, {
+  Container: LayoutContainer,
+});
 
 export default UiLayout;

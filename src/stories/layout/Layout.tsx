@@ -21,8 +21,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <UiLayout>
-      <Header onCreateAccount={onCreateAccount} onLogin={onLogin} onLogout={onLogout} />
-      {children}
+      <UiLayout.Container>
+        <Header onCreateAccount={onCreateAccount} onLogin={onLogin} onLogout={onLogout} />
+        {children}
+      </UiLayout.Container>
     </UiLayout>
   );
 };

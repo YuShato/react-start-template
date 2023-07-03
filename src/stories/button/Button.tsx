@@ -11,6 +11,7 @@ interface ButtonProps extends UiButtonProps {
   size?: 'small' | 'medium' | 'large';
   label: string;
   viewType?: 'default' | 'facebook' | 'google' | 'like' | 'login' | 'logout';
+  onClick?: () => void;
 }
 
 const ButtonIcons = {
@@ -27,6 +28,7 @@ export const Button = ({
   backgroundColor,
   label,
   viewType,
+  onClick,
   ...props
 }: ButtonProps) => {
   const Icon = viewType !== 'default' ? ButtonIcons[viewType] : null;
@@ -38,6 +40,7 @@ export const Button = ({
       primary={primary}
       size={size}
       viewType={viewType}
+      onClick={onClick}
       {...props}
     >
       {Icon && <Icon />}
