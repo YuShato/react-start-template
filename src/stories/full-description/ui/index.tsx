@@ -9,6 +9,7 @@ const ItemDescription = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
   p {
     margin: 0;
@@ -22,6 +23,8 @@ const ItemDescriptionTitle = styled.h4`
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
+  margin: 0;
+  padding: 0;
 `;
 
 const ItemDescriptionBlock = styled.div`

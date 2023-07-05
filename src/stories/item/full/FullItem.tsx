@@ -1,12 +1,17 @@
 import React from 'react';
 import { Button } from '../../button/Button';
-
 import ShopButton from '../../card-button/ShopButton';
-import FullDescription, { FullDescriptionProps } from '../../full-description/FullDescription';
 import Rating from '../../rating/Rating';
 import Sizes, { SizeItemTypes } from '../../sizes/Sizes';
 import { DEFAULT_SIZE, SIZES } from '../../sizes/utils/constants';
 import Categories, { CategoryProps } from '../../categories/Categories';
+import UiCategories from '../../categories/ui';
+import ProductSocialList, { SocialItemProps } from '../../product-social/ProductSocial';
+import UiFItem from './ui';
+import TabsCmp, { mockTabsData } from '../../tabs/Tabs';
+import ProductSlider, { Image } from '../../slider/Slider';
+import UiLayout from '../../layout/ui';
+import { FullDescriptionProps } from '../../full-description/FullDescription';
 
 interface FullItemProps {
   name: string;
@@ -18,15 +23,16 @@ interface FullItemProps {
   rating: number;
   sku: number;
   categories: Array<CategoryProps> | [];
-  images: string[];
+  productSocial: [] | SocialItemProps[];
+  images: Array<Image> | [];
   tags: Array<CategoryProps> | [];
   shortDescription: string;
-  fullDescription: FullDescriptionProps;
+  fullDescription?: FullDescriptionProps; // Добавьте необязательное свойство
   onAddToCart: () => void;
   onAddToFavorite: () => void;
 }
 
-const DEF_DESCRIPTION = {
+export const DEF_DESCRIPTION = {
   common: '',
   living_room: '',
   dinning_room: '',
@@ -40,74 +46,66 @@ const FullItem = (props: FullItemProps) => {
     itemCount = 0,
     activeSize = DEFAULT_SIZE,
     reviewCount = 0,
-    rating = 0,
+    rating = 4,
     sku = 0,
     categories = [],
     tags = [],
     onAddToCart,
     onAddToFavorite,
     shortDescription = '',
-    fullDescription = DEF_DESCRIPTION,
+
     images = [],
+    productSocial = [],
   } = props;
 
   return (
-    <div>
-      <div>{images && images.map((image) => <img src={image} key={image} alt={name} />)}</div>
+    <UiLayout.Container>
+      <UiFItem.MainInfo>
+        <ProductSlider images={images} />
 
-      <div>
-        <p>{name}</p>
+        <UiFItem>
+          <UiFItem.Title>{name}</UiFItem.Title>
 
-        <p>{price}</p>
-        <div>
-          <Rating rating={rating} />
+          <UiFItem.Price>${price}</UiFItem.Price>
 
-          <div>{reviewCount} Customer Review</div>
-        </div>
-        <div>
-          <h3>Short Description:</h3>
+          <Rating rating={rating} title="Customer Review" reviewCount={reviewCount} />
 
-          <p>{shortDescription}</p>
-        </div>
+          <UiFItem.Info>
+            <UiFItem.SubTitle>Short Description:</UiFItem.SubTitle>
 
-        <Sizes sizes={SIZES} activeSize={activeSize} />
+            <UiFItem.Description>{shortDescription}</UiFItem.Description>
 
-        <ShopButton itemCount={itemCount} />
+            <Sizes sizes={SIZES} activeSize={activeSize} />
 
-        <Button label="BUY NOW" primary={true} size="medium" type="button" onClick={onAddToCart} />
+            <UiFItem.ButtonList>
+              <ShopButton itemCount={itemCount} />
 
-        <Button label="ADD TO CART" size="medium" type="button" onClick={onAddToCart} />
+              <UiFItem.ButtonList>
+                <Button label="BUY NOW" primary={false} size="medium" type="button" onClick={onAddToCart} />
 
-        <Button label="" onClick={onAddToFavorite} primary size="small" type="button" viewType="like" />
+                <Button label="ADD TO CART" primary={true} size="medium" type="button" onClick={onAddToCart} />
 
-        <p>
-          <span>SKU:</span> {sku}
-        </p>
+                <Button label="" primary={true} size="small" type="button" viewType="like" onClick={onAddToFavorite} />
+              </UiFItem.ButtonList>
+            </UiFItem.ButtonList>
 
-        <Categories list={categories} title="Categories" />
+            <UiFItem.InfoList>
+              <UiCategories>
+                <h4>SKU:</h4> {sku}
+              </UiCategories>
 
-        <Categories list={tags} title="Tags" />
+              <Categories list={categories} title="Categories" />
 
-        <div>
-          <p>Share this products:</p>
-          {/* добавить social */}
-        </div>
-      </div>
+              <Categories list={tags} title="Tags" />
 
-      {/* full */}
+              <ProductSocialList list={productSocial} />
+            </UiFItem.InfoList>
+          </UiFItem.Info>
+        </UiFItem>
+      </UiFItem.MainInfo>
 
-      <div>
-        {/* tabs */}
-        <div>
-          <div>Product Description</div>
-
-          <div>Reviews ({reviewCount})</div>
-        </div>
-
-        {/* description */}
-        <FullDescription {...fullDescription} />
-      </div>
-    </div>
+      <TabsCmp data={mockTabsData} />
+    </UiLayout.Container>
   );
 };
 

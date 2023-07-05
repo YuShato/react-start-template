@@ -106,6 +106,7 @@ const UiButton = styled.button<UiButtonProps>`
       border-radius: 6px;
       border: 1px solid #46a358;
       background-color: #fff;
+      column-gap: 0;
 
       svg {
         width: 20px;
