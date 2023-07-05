@@ -2,12 +2,7 @@ import React, { useState } from 'react';
 import { Tabs, Tab, Content } from './ui';
 import FullDescription from '../full-description/FullDescription';
 import { fullDescription } from '../item/full/mockData';
-
-export interface TabData {
-  id: number;
-  name: string;
-  component: JSX.Element;
-}
+import { TabData } from './types';
 
 export const mockTabsData: TabData[] = [
   {

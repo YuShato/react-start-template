@@ -1,11 +1,7 @@
-import React, { ReactNode } from 'react';
-import UiModal, { UiModalProps } from './ui';
+import React from 'react';
+import UiModal from './ui';
 import CloseIcon from './assets/close';
-
-interface ModalProps extends UiModalProps {
-  visible: boolean;
-  children: ReactNode;
-}
+import { ModalProps } from './types';
 
 const Modal: React.FC<ModalProps> = ({ visible, children }) => {
   if (!visible) {

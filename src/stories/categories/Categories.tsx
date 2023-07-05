@@ -1,15 +1,6 @@
 import React from 'react';
 import UiCategories from './ui';
-
-export interface CategoryProps {
-  id: number;
-  name: string;
-}
-
-export interface CategoriesProps {
-  list: CategoryProps[] | [];
-  title: string;
-}
+import { CategoriesProps } from './types';
 
 const Categories = ({ list, title }: CategoriesProps) => {
   return (

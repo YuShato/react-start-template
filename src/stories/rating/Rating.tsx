@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 import UiStarRating from './ui';
-
-interface RatingProps {
-  rating: number;
-  title: string;
-  reviewCount: number;
-}
+import { RatingProps } from './types';
 
 const DEF_RATING = 4;
 

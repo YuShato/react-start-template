@@ -1,16 +1,7 @@
 import React from 'react';
-import UiHeader, { UiNavListLinkProps } from './ui';
+import UiHeader from './ui';
 import { PATHS } from './utils/constants/paths';
-
-interface NavLinkItemProps extends UiNavListLinkProps {
-  path: {
-    id: number;
-    name: string;
-    pathLink: string;
-    icon?: () => React.JSX.Element;
-  };
-  isActive?: boolean;
-}
+import { NavLinkItemProps } from './types';
 
 const NavLinkItem = ({ path, isActive = false }: NavLinkItemProps) => {
   const { name, pathLink, icon: Icon } = path;

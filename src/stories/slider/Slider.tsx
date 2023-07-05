@@ -4,6 +4,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import UiSlider from './ui';
 import { baseUrl } from './mockData';
+import { ProductSliderProps } from './types';
 
 const generatePreview = (i: number) => {
   return (
@@ -13,19 +14,10 @@ const generatePreview = (i: number) => {
   );
 };
 
-export interface Image {
-  id: number;
-  src: string;
-  alt: string;
-}
-
-export interface ProductSliderProps {
-  images: Image[];
-}
-
 class ProductSlider extends Component<ProductSliderProps> {
   render() {
     const { images } = this.props;
+
     const settings = {
       customPaging: generatePreview,
       dots: true,

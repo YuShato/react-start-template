@@ -1,18 +1,11 @@
 import React from 'react';
-import UiButton, { UiButtonProps } from './ui';
+import UiButton from './ui';
 import GoogleIcon from './assets/google';
 import FacebookIcon from './assets/facebook';
 import LikeIcon from './assets/like';
 import LoginIcon from './assets/login';
 import LogoutIcon from './assets/logout';
-
-interface ButtonProps extends UiButtonProps {
-  primary?: boolean;
-  size?: 'small' | 'medium' | 'large';
-  label: string;
-  viewType?: 'default' | 'facebook' | 'google' | 'like' | 'login' | 'logout';
-  onClick?: () => void;
-}
+import { ButtonProps } from './types';
 
 const ButtonIcons = {
   facebook: FacebookIcon,

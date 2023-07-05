@@ -3,10 +3,7 @@ import { Button } from '../button/Button';
 import UiBuy from './ui';
 import PlusIcon from './assets/plus';
 import MinusIcon from './assets/minus';
-
-interface ShopButtonProps {
-  itemCount: number;
-}
+import { ShopButtonProps } from './types';
 
 const ShopButton = ({ itemCount = 0 }: ShopButtonProps) => {
   const onClickShopButton = () => {

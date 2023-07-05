@@ -1,12 +1,6 @@
 import React from 'react';
 import UiDescription from './ui';
-
-export interface FullDescriptionProps {
-  common: string;
-  living_room: string;
-  dinning_room: string;
-  office: string;
-}
+import { FullDescriptionProps } from './types';
 
 const renderSection = (title: string, content: string) => {
   return (

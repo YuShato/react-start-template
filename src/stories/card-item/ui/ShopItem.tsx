@@ -5,14 +5,7 @@ import DefaultImage from './assets/default.png';
 
 import ShopButton from '../../card-button/ShopButton';
 import UiShopItem from '../ui/index';
-
-interface ShopItemProps {
-  imgSrc: string;
-  name: string;
-  sku: number;
-  itemCount: number;
-  price: number;
-}
+import { ShopItemProps } from './types';
 
 const ShopItem = ({ imgSrc = '', name = '', price = 0, sku = 0, itemCount = 0 }: ShopItemProps) => {
   const total = price * itemCount;

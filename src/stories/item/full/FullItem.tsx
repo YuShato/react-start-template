@@ -2,35 +2,16 @@ import React from 'react';
 import { Button } from '../../button/Button';
 import ShopButton from '../../card-button/ShopButton';
 import Rating from '../../rating/Rating';
-import Sizes, { SizeItemTypes } from '../../sizes/Sizes';
+import Sizes from '../../sizes/Sizes';
 import { DEFAULT_SIZE, SIZES } from '../../sizes/utils/constants';
-import Categories, { CategoryProps } from '../../categories/Categories';
+import Categories from '../../categories/Categories';
 import UiCategories from '../../categories/ui';
-import ProductSocialList, { SocialItemProps } from '../../product-social/ProductSocial';
+import ProductSocialList from '../../product-social/ProductSocial';
 import UiFItem from './ui';
 import TabsCmp, { mockTabsData } from '../../tabs/Tabs';
-import ProductSlider, { Image } from '../../slider/Slider';
+import ProductSlider from '../../slider/Slider';
 import UiLayout from '../../layout/ui';
-import { FullDescriptionProps } from '../../full-description/FullDescription';
-
-interface FullItemProps {
-  name: string;
-  price: number;
-  itemCount: number;
-  activeSize: 's' | 'm' | 'l' | 'xl';
-  sizes: SizeItemTypes[];
-  reviewCount: number;
-  rating: number;
-  sku: number;
-  categories: Array<CategoryProps> | [];
-  productSocial: [] | SocialItemProps[];
-  images: Array<Image> | [];
-  tags: Array<CategoryProps> | [];
-  shortDescription: string;
-  fullDescription?: FullDescriptionProps; // Добавьте необязательное свойство
-  onAddToCart: () => void;
-  onAddToFavorite: () => void;
-}
+import { FullItemProps } from './types';
 
 export const DEF_DESCRIPTION = {
   common: '',

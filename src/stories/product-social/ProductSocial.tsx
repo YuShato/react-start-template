@@ -4,6 +4,7 @@ import GrayLinkedin from './assets/icons/GrayLinkedin';
 import GrayMessage from './assets/icons/GrayMessage';
 import GrayTwitter from './assets/icons/GrayTwitter';
 import UiSocial, { UiButtonProps } from './ui';
+import { SocialListProps } from './types';
 
 const SocialIcon = {
   facebook: GrayFacebook,
@@ -11,16 +12,6 @@ const SocialIcon = {
   twitter: GrayTwitter,
   email: GrayMessage,
 };
-
-export interface SocialItemProps {
-  id: string;
-  link: string;
-  viewType: 'email' | 'facebook' | 'linkedin' | 'twitter';
-}
-
-interface SocialListProps {
-  list: SocialItemProps[] | [];
-}
 
 const ProductSocialButton = ({ viewType, ...props }: UiButtonProps) => {
   const Icon = SocialIcon[viewType];
