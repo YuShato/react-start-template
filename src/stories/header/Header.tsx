@@ -11,11 +11,11 @@ export const Header = ({ user, onLogin, onLogout }: HeaderProps) => {
     <UiHeader>
       <UiHeader.Logo href="/">
         <UiHeader.DesktopLogo>
-          <Logo viewType="default" />
+          <Logo viewtype="default" />
         </UiHeader.DesktopLogo>
 
         <UiHeader.MobileLogo>
-          <Logo viewType="mobile" />
+          <Logo viewtype="mobile" />
         </UiHeader.MobileLogo>
       </UiHeader.Logo>
 
@@ -23,10 +23,10 @@ export const Header = ({ user, onLogin, onLogout }: HeaderProps) => {
 
       {user ? (
         <>
-          <Button label="Logout" viewType="logout" size="small" onClick={onLogout} />
+          <Button label="Logout" viewtype="logout" size="small" onClick={onLogout} />
         </>
       ) : (
-        <Button label="Login" viewType="login" size="small" onClick={onLogin} />
+        <Button label="Login" viewtype="login" size="small" onClick={onLogin} />
       )}
     </UiHeader>
   );

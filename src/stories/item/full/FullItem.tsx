@@ -20,7 +20,7 @@ export const DEF_DESCRIPTION = {
   office: '',
 };
 
-const FullItem = (props: FullItemProps) => {
+const FullItem = ({ data }: FullItemProps) => {
   const {
     name = '',
     price = 0,
@@ -37,7 +37,7 @@ const FullItem = (props: FullItemProps) => {
 
     images = [],
     productSocial = [],
-  } = props;
+  } = data;
 
   return (
     <UiLayout.Container>
@@ -66,7 +66,7 @@ const FullItem = (props: FullItemProps) => {
 
                 <Button label="ADD TO CART" primary={true} size="medium" type="button" onClick={onAddToCart} />
 
-                <Button label="" primary={true} size="small" type="button" viewType="like" onClick={onAddToFavorite} />
+                <Button label="" primary={true} size="small" type="button" viewtype="like" onClick={onAddToFavorite} />
               </UiFItem.ButtonList>
             </UiFItem.ButtonList>
 

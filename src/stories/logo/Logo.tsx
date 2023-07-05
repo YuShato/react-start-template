@@ -11,7 +11,7 @@ import { css, styled } from 'styled-components';
 /* TYPES */
 import { LogoProps, LogoType } from './types';
 
-const UiLogoWrapper = styled.div<{ viewType: LogoType }>`
+const UiLogoWrapper = styled.div<{ viewtype: LogoType }>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,22 +23,22 @@ const UiLogoWrapper = styled.div<{ viewType: LogoType }>`
     max-height: 100%;
   }
 
-  ${({ viewType }) =>
-    viewType === 'default' &&
+  ${({ viewtype }) =>
+    viewtype === 'default' &&
     css`
       width: 150px;
       height: 34px;
     `}
 
-  ${({ viewType }) =>
-    viewType === 'big' &&
+  ${({ viewtype }) =>
+    viewtype === 'big' &&
     css`
       width: 215px;
       height: 135px;
     `}
 
-  ${({ viewType }) =>
-    viewType === 'mobile' &&
+  ${({ viewtype }) =>
+    viewtype === 'mobile' &&
     css`
       width: 35px;
       height: 35px;
@@ -56,12 +56,12 @@ const LogoByType = {
   mobile: LogoMobile,
 };
 
-const Logo = ({ viewType = 'default' }: LogoProps) => {
-  const LogoSvg = LogoByType[viewType];
+const Logo = ({ viewtype = 'default' }: LogoProps) => {
+  const LogoSvg = LogoByType[viewtype];
 
   return (
     <div>
-      <UiLogoWrapper viewType={viewType}>
+      <UiLogoWrapper viewtype={viewtype}>
         <LogoSvg />
       </UiLogoWrapper>
     </div>

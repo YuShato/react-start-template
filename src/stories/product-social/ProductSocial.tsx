@@ -13,11 +13,11 @@ const SocialIcon = {
   email: GrayMessage,
 };
 
-const ProductSocialButton = ({ viewType, ...props }: UiButtonProps) => {
-  const Icon = SocialIcon[viewType];
+const ProductSocialButton = ({ viewtype, ...props }: UiButtonProps) => {
+  const Icon = SocialIcon[viewtype];
 
   return (
-    <UiSocial.Button viewType={viewType} {...props}>
+    <UiSocial.Button viewtype={viewtype} {...props}>
       {<Icon />}
     </UiSocial.Button>
   );
@@ -34,7 +34,7 @@ const ProductSocialList = ({ list }: SocialListProps) => {
 
       <UiSocial.List>
         {list.map((item) => (
-          <ProductSocialButton key={item.id} viewType={item.viewType} {...item} />
+          <ProductSocialButton key={item.id} viewtype={item.viewtype} {...item} />
         ))}
       </UiSocial.List>
     </UiSocial>

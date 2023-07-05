@@ -7,7 +7,7 @@ import TwitterSocialIcon from './assets/twitter';
 import YoutubeSocialIcon from './assets/youtube';
 
 interface ButtonProps extends UiButtonProps {
-  viewType: 'youtube' | 'facebook' | 'instagram' | 'linkedin' | 'twitter';
+  viewtype: 'youtube' | 'facebook' | 'instagram' | 'linkedin' | 'twitter';
 }
 
 const SocialIcon = {
@@ -18,11 +18,11 @@ const SocialIcon = {
   youtube: YoutubeSocialIcon,
 };
 
-const SocialButton = ({ viewType, ...props }: ButtonProps) => {
-  const Icon = SocialIcon[viewType];
+const SocialButton = ({ viewtype, ...props }: ButtonProps) => {
+  const Icon = SocialIcon[viewtype];
 
   return (
-    <UiSocialButton viewType={viewType} {...props}>
+    <UiSocialButton viewtype={viewtype} {...props}>
       {<Icon />}
     </UiSocialButton>
   );

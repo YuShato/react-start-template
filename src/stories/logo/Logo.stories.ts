@@ -7,7 +7,7 @@ const meta = {
   component: Logo,
   tags: ['autodocs'],
   argTypes: {
-    viewType: { control: 'radio' },
+    viewtype: { control: 'radio' },
   },
 } satisfies Meta<typeof Logo>;
 
@@ -15,19 +15,19 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    viewType: 'default',
+    viewtype: 'default',
   },
 };
 
 export const Big: Story = {
   args: {
-    viewType: 'big',
+    viewtype: 'big',
   },
 };
 
 export const Mobile: Story = {
   args: {
-    viewType: 'mobile',
+    viewtype: 'mobile',
   },
 };
 

@@ -7,7 +7,7 @@ export interface UiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   backgroundColor?: string;
   primary?: boolean;
   size?: 'small' | 'medium' | 'large';
-  viewType?: 'default' | 'facebook' | 'google' | 'like' | 'login' | 'logout';
+  viewtype?: 'default' | 'facebook' | 'google' | 'like' | 'login' | 'logout';
 }
 
 const UiButton = styled.button<UiButtonProps>`
@@ -66,8 +66,8 @@ const UiButton = styled.button<UiButtonProps>`
       max-width: 300px;
     `}
 
-  ${({ viewType }) =>
-    viewType === 'facebook' &&
+  ${({ viewtype }) =>
+    viewtype === 'facebook' &&
     css`
       display: flex;
       column-gap: 10px;
@@ -96,8 +96,8 @@ const UiButton = styled.button<UiButtonProps>`
       }
     `}
 
-  ${({ viewType }) =>
-    viewType === 'like' &&
+  ${({ viewtype }) =>
+    viewtype === 'like' &&
     css`
       display: flex;
       justify-content: center;
@@ -114,9 +114,9 @@ const UiButton = styled.button<UiButtonProps>`
       }
     `}
 
-    ${({ primary, viewType }) =>
+    ${({ primary, viewtype }) =>
     !primary &&
-    viewType === 'like' &&
+    viewtype === 'like' &&
     css`
       color: #fff;
       background: #46a358;
@@ -127,8 +127,8 @@ const UiButton = styled.button<UiButtonProps>`
       }
     `}
 
-  ${({ viewType }) =>
-    viewType === 'google' &&
+  ${({ viewtype }) =>
+    viewtype === 'google' &&
     css`
       display: flex;
       column-gap: 10px;
@@ -158,8 +158,8 @@ const UiButton = styled.button<UiButtonProps>`
       }
     `}
 
-  ${({ viewType }) =>
-    viewType === 'logout' &&
+  ${({ viewtype }) =>
+    viewtype === 'logout' &&
     css`
       background-color: #fff;
       color: #46a358;
@@ -190,8 +190,8 @@ const UiButton = styled.button<UiButtonProps>`
       }
     `}
 
-  ${({ viewType }) =>
-    viewType === 'login' &&
+  ${({ viewtype }) =>
+    viewtype === 'login' &&
     css`
       @media ${MOBILE_MAX} {
         width: 40px;

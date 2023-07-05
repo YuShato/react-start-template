@@ -1,4 +1,9 @@
-import { FullDescriptionProps } from '../../../full-description/FullDescription';
+import { DEFAULT_SIZE, SIZES } from '../../../sizes/utils/constants';
+import { FullDescriptionProps } from '../../../full-description/types';
+import { CATEGORIES, TAGS } from '../../../categories/utils/constants/categories';
+import { PRODUCT_SOCIAL } from '../../../product-social/utils/constants/product-social';
+import { images } from '../../..//slider/mockData';
+import { FullItemProps } from '../types';
 
 export const fullDescription: FullDescriptionProps = {
   common:
@@ -9,4 +14,28 @@ export const fullDescription: FullDescriptionProps = {
     'The benefits of houseplants are endless. In addition to cleaning the air of harmful toxins, they can help to improve your mood, reduce stress and provide you with better sleep. Fill every room of your home with houseplants and their restorative qualities will improve your life.',
   office:
     'The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+};
+
+export const mockProductData: FullItemProps['data'] = {
+  name: 'Barberton Daisy',
+  price: 119,
+  itemCount: 1,
+  activeSize: DEFAULT_SIZE,
+  reviewCount: 19,
+  rating: 4,
+  sku: 1995751877966,
+  categories: CATEGORIES,
+  tags: TAGS,
+  onAddToCart: () => {
+    console.log('onAddToCart');
+  },
+  onAddToFavorite: () => {
+    console.log('onAddToFavorite');
+  },
+  shortDescription:
+    'The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. ',
+  fullDescription: fullDescription,
+  images: images,
+  productSocial: PRODUCT_SOCIAL,
+  sizes: SIZES,
 };

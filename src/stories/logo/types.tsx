@@ -1,5 +1,5 @@
 export interface LogoProps {
-  viewType: LogoType;
+  viewtype: LogoType;
 }
 
 export type LogoType = 'big' | 'default' | 'mobile';

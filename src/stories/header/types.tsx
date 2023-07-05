@@ -18,5 +18,5 @@ export interface NavLinkItemProps extends UiNavListLinkProps {
     pathLink: string;
     icon?: () => React.JSX.Element;
   };
-  isActive?: boolean;
+  active?: boolean;
 }

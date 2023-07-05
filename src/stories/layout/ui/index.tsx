@@ -8,13 +8,16 @@ const LayoutWrapper = styled.div`
   padding-inline: 40px;
   box-sizing: border-box;
   min-width: 100%;
+  margin-bottom: 60px;
 
   @media ${TABLET_MAX} {
     padding-inline: 20px;
+    margin-bottom: 40px;
   }
 
   @media ${MOBILE_MAX} {
     padding-inline: 15px;
+    margin-bottom: 30px;
   }
 `;
 

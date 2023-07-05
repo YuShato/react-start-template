@@ -14,30 +14,30 @@ type Story = StoryObj<typeof meta>;
 
 export const Facebook: Story = {
   args: {
-    viewType: 'facebook',
+    viewtype: 'facebook',
   },
 };
 
 export const Youtube: Story = {
   args: {
-    viewType: 'youtube',
+    viewtype: 'youtube',
   },
 };
 
 export const Instagram: Story = {
   args: {
-    viewType: 'instagram',
+    viewtype: 'instagram',
   },
 };
 
 export const Twitter: Story = {
   args: {
-    viewType: 'twitter',
+    viewtype: 'twitter',
   },
 };
 
 export const Linkedin: Story = {
   args: {
-    viewType: 'linkedin',
+    viewtype: 'linkedin',
   },
 };

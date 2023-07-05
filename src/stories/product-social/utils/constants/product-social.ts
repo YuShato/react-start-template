@@ -4,21 +4,21 @@ export const PRODUCT_SOCIAL: SocialItemProps[] = [
   {
     id: '1',
     link: 'https://example.com',
-    viewType: 'email',
+    viewtype: 'email',
   },
   {
     id: '2',
     link: 'https://facebook.com',
-    viewType: 'facebook',
+    viewtype: 'facebook',
   },
   {
     id: '3',
     link: 'https://linkedin.com',
-    viewType: 'linkedin',
+    viewtype: 'linkedin',
   },
   {
     id: '4',
     link: 'https://twitter.com',
-    viewType: 'twitter',
+    viewtype: 'twitter',
   },
 ];

@@ -20,11 +20,11 @@ export const Button = ({
   size = 'medium',
   backgroundColor,
   label,
-  viewType,
+  viewtype,
   onClick,
   ...props
 }: ButtonProps) => {
-  const Icon = viewType !== 'default' ? ButtonIcons[viewType] : null;
+  const Icon = viewtype !== 'default' ? ButtonIcons[viewtype] : null;
 
   return (
     <UiButton
@@ -32,7 +32,7 @@ export const Button = ({
       backgroundColor={backgroundColor}
       primary={primary}
       size={size}
-      viewType={viewType}
+      viewtype={viewtype}
       onClick={onClick}
       {...props}
     >

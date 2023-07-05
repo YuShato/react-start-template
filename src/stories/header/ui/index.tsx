@@ -4,7 +4,7 @@ import { MOBILE_MAP, MOBILE_MAX, TABLET_MAX } from '../../../constants/media-que
 import UiButton from '../../button/ui';
 
 export interface UiNavListLinkProps extends LinkHTMLAttributes<HTMLAnchorElement> {
-  isActive?: boolean;
+  active?: boolean;
 }
 
 const Header = styled.header`
@@ -116,8 +116,8 @@ const NavListLink = styled.a<UiNavListLinkProps>`
     font-weight: 700;
   }
 
-  ${({ isActive }) =>
-    isActive &&
+  ${({ active }) =>
+    active &&
     css`
       color: #3d3d3d;
       font-weight: 700;

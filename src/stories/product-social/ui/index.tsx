@@ -2,7 +2,7 @@ import { LinkHTMLAttributes } from 'react';
 import { styled } from 'styled-components';
 
 export interface UiButtonProps extends LinkHTMLAttributes<HTMLLinkElement> {
-  viewType: 'facebook' | 'linkedin' | 'twitter' | 'email';
+  viewtype: 'facebook' | 'linkedin' | 'twitter' | 'email';
 }
 const ProductSocialButton = styled.a<UiButtonProps>`
   width: 18px;

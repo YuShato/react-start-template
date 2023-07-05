@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes } from 'react';
 import { styled } from 'styled-components';
 
 export interface UiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  viewType: 'youtube' | 'facebook' | 'instagram' | 'linkedin' | 'twitter';
+  viewtype: 'youtube' | 'facebook' | 'instagram' | 'linkedin' | 'twitter';
 }
 
 const UiSocialButton = styled.button<UiButtonProps>`

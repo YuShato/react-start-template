@@ -27,7 +27,7 @@ export const Facebook: Story = {
   args: {
     label: 'Login with Facebook',
     type: 'button',
-    viewType: 'facebook',
+    viewtype: 'facebook',
   },
 };
 
@@ -35,7 +35,7 @@ export const Google: Story = {
   args: {
     label: 'Login with Google',
     type: 'button',
-    viewType: 'google',
+    viewtype: 'google',
   },
 };
 
@@ -44,7 +44,7 @@ export const Like: Story = {
     label: '',
     type: 'button',
     size: 'small',
-    viewType: 'like',
+    viewtype: 'like',
   },
 };
 
@@ -53,7 +53,7 @@ export const Logout: Story = {
     label: 'Logout',
     type: 'button',
     size: 'small',
-    viewType: 'logout',
+    viewtype: 'logout',
   },
 };
 

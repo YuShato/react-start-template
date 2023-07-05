@@ -3,11 +3,11 @@ import UiHeader from './ui';
 import { PATHS } from './utils/constants/paths';
 import { NavLinkItemProps } from './types';
 
-const NavLinkItem = ({ path, isActive = false }: NavLinkItemProps) => {
+const NavLinkItem = ({ path, active = false }: NavLinkItemProps) => {
   const { name, pathLink, icon: Icon } = path;
 
   return (
-    <UiHeader.NavItem href={pathLink} isActive={isActive}>
+    <UiHeader.NavItem href={pathLink} active={active}>
       <Icon />
 
       <span>{name}</span>
@@ -19,7 +19,7 @@ const NavList = () => {
   return (
     <UiHeader.Nav>
       {PATHS.map((path) => (
-        <NavLinkItem key={path.id} path={path} isActive={path.id === 0} />
+        <NavLinkItem key={path.id} path={path} active={path.id === 0} />
       ))}
     </UiHeader.Nav>
   );
