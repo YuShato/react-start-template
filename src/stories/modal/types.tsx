@@ -2,6 +2,6 @@ import { ReactNode } from 'react';
 import { UiModalProps } from './ui';
 
 export interface ModalProps extends UiModalProps {
-  visible: boolean;
   children: ReactNode;
+  visible: boolean;
 }

@@ -1,6 +1,6 @@
+import { SocialItemProps } from '../../product-social/types';
 import { CategoryProps } from '../../categories/types';
 import { FullDescriptionProps } from '../../full-description/types';
-import { SocialItemProps } from '../../product-social/types';
 import { SizeItemTypes } from '../../sizes/types';
 import { Image } from '../../slider/types';
 

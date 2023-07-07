@@ -5,18 +5,18 @@ export type User = {
 };
 
 export interface HeaderProps {
-  user?: User;
+  onCreateAccount: () => void;
   onLogin: () => void;
   onLogout: () => void;
-  onCreateAccount: () => void;
+  user?: User;
 }
 
 export interface NavLinkItemProps extends UiNavListLinkProps {
+  active?: boolean;
   path: {
     id: number;
     name: string;
     pathLink: string;
     icon?: () => React.JSX.Element;
   };
-  active?: boolean;
 }

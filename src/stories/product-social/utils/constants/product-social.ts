@@ -1,4 +1,4 @@
-import { SocialItemProps } from '../../ProductSocial';
+import { SocialItemProps } from '../../types';
 
 export const PRODUCT_SOCIAL: SocialItemProps[] = [
   {

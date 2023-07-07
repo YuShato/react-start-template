@@ -1,6 +1,6 @@
 export interface FullDescriptionProps {
   common: string;
-  living_room: string;
   dinning_room: string;
+  living_room: string;
   office: string;
 }

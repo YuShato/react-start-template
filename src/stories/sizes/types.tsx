@@ -5,11 +5,11 @@ export interface SizeItemTypes {
 }
 
 export interface SizeItemProps {
-  size: SizeItemTypes;
   activeSize: string;
+  size: SizeItemTypes;
 }
 
 export interface SizesListProps {
-  sizes: SizeItemTypes[];
   activeSize: string;
+  sizes: SizeItemTypes[];
 }

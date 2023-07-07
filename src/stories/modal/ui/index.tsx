@@ -3,8 +3,8 @@ import { BaseHTMLAttributes } from 'react';
 import { MOBILE_MAX, TABLET_MAX } from '../../../constants/media-query';
 
 export interface UiModalProps extends BaseHTMLAttributes<HTMLDivElement> {
-  visible: boolean;
   children: React.ReactNode;
+  visible: boolean;
 }
 
 const Mask = styled.div`

@@ -1,7 +1,7 @@
 export interface ShopItemProps {
   imgSrc: string;
-  name: string;
-  sku: number;
   itemCount: number;
+  name: string;
   price: number;
+  sku: number;
 }

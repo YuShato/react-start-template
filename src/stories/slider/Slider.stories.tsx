@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react';
 import ProductSlider from './Slider';
+import type { Meta, StoryObj } from '@storybook/react';
 import { images } from './mockData';
 
 const meta = {

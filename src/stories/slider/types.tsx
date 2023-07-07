@@ -1,7 +1,7 @@
 export interface Image {
+  alt: string;
   id: number;
   src: string;
-  alt: string;
 }
 
 export interface ProductSliderProps {
