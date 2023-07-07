@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Logo from './homeworks/homework2/components/logo';
+import Logo from './stories/logo/Logo';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <Logo />
+        <Logo viewtype="default" />
       </header>
     </div>
   );

@@ -5,6 +5,7 @@ import FacebookIcon from './assets/facebook';
 import LikeIcon from './assets/like';
 import LoginIcon from './assets/login';
 import LogoutIcon from './assets/logout';
+import CartIcon from './assets/cart';
 import { ButtonProps } from './types';
 
 const ButtonIcons = {
@@ -13,6 +14,7 @@ const ButtonIcons = {
   like: LikeIcon,
   login: LoginIcon,
   logout: LogoutIcon,
+  cart: CartIcon,
 };
 
 export const Button = ({

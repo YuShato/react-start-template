@@ -47,6 +47,15 @@ export const Like: Story = {
     viewtype: 'like',
   },
 };
+export const Cart: Story = {
+  args: {
+    label: '',
+    type: 'button',
+    size: 'small',
+    viewtype: 'cart',
+    primary: true,
+  },
+};
 
 export const Logout: Story = {
   args: {

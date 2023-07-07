@@ -7,7 +7,7 @@ export interface UiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   backgroundColor?: string;
   primary?: boolean;
   size?: 'small' | 'medium' | 'large';
-  viewtype?: 'default' | 'facebook' | 'google' | 'like' | 'login' | 'logout';
+  viewtype?: 'default' | 'facebook' | 'google' | 'like' | 'login' | 'logout' | 'cart';
 }
 
 const UiButton = styled.button<UiButtonProps>`
@@ -97,7 +97,7 @@ const UiButton = styled.button<UiButtonProps>`
     `}
 
   ${({ viewtype }) =>
-    viewtype === 'like' &&
+    (viewtype === 'like' || viewtype === 'cart') &&
     css`
       display: flex;
       justify-content: center;

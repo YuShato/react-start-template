@@ -4,6 +4,6 @@ export interface ButtonProps extends UiButtonProps {
   primary?: boolean;
   size?: 'small' | 'medium' | 'large';
   label: string;
-  viewtype?: 'default' | 'facebook' | 'google' | 'like' | 'login' | 'logout';
+  viewtype?: 'default' | 'facebook' | 'google' | 'like' | 'login' | 'logout' | 'cart';
   onClick?: () => void;
 }
